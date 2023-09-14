@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 04</title>
+</head>
+<style>
+    img {
+        box-shadow: 10px 10px 20px red;
+    }
+   figure{
+    display: inline-block;
+    text-align: center;
+    width: 300px;
+   }
+   figcaption{
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+   }
+</style>
+<body>
+    <h1>Imagenes ramdomxd</h1>
+    <div id="app"></div>
+
+        <!--<figure>
+            <img src="https://picsum.photos/id/1/200/200" alt="">
+            <figcaption>Jhone</figcaption>
+        </figure>
+        <figure>
+            <img src="https://picsum.photos/id/2/200/200" alt="">
+            <figcaption>Jane</figcaption>
+        </figure>-->
+    <script>
+        const app = document.getElementById("app")
+        const url = "https://picsum.photos/id/"
+        const size = "/200/200"
+        const Picture = (parametro.id, nombre) => {
+            const src = url+parametro+size
+            return `
+                <figure>
+                    <img src="${src}" alt="">
+                    <figcaption>${parametro.nombre}</figcaption>
+                </figure>
+            `
+            }
+        app.innerHTML = Picture({id:"1", nombre:"Jhon"})
+        app.innerHTML += Picture("2", "Jane")
+        app.innerHTML += Picture("3", "Jane")
+        app.innerHTML += Picture("4", "Jane")
+    </script>
+</body>
+</html>
