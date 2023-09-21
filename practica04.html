@@ -35,8 +35,8 @@
         const app = document.getElementById("app")
         const url = "https://picsum.photos/id/"
         const size = "/200/200"
-        const Picture = (parametro.id, nombre) => {
-            const src = url+parametro+size
+        const Picture = (parametro) => {
+            const src = url+parametro.id+size
             return `
                 <figure>
                     <img src="${src}" alt="">
@@ -45,9 +45,9 @@
             `
             }
         app.innerHTML = Picture({id:"1", nombre:"Jhon"})
-        app.innerHTML += Picture("2", "Jane")
-        app.innerHTML += Picture("3", "Jane")
-        app.innerHTML += Picture("4", "Jane")
+        app.innerHTML += Picture({id:"2", nombre:"Jane"})
+        app.innerHTML += Picture({id:"3", nombre:"Johana"})
+
     </script>
 </body>
 </html>

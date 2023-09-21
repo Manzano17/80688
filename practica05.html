@@ -8,7 +8,7 @@
 <style>
     img {
         box-shadow: 10px 10px 20px red;
-        border-radius: 30px 21px 52px;
+        border-radius: 30px;
     }
    figure{
     display: inline-block;
@@ -41,7 +41,7 @@
             }
         app.innerHTML = Picture({id:"1", nombre:"Jhon"})
         app.innerHTML += Picture({id:"2", nombre:"Jane"})
-        app.innerHTML += Picture({id:"3", nombre:"Johana"})
+        app.innerHTML += Picture({id:"94", nombre:"Johana"})
         
         const lista = document.querySelectorAll("img")
         for (let i = 0; i < lista.length; i++) {
@@ -49,7 +49,6 @@
                 // lista[i].style.borderRadius = "50%"
                 lista[i].classList.toggle("redonda")
             });
-            
         }
     </script>
 </body>
