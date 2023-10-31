@@ -1,12 +1,12 @@
 const form = document.getElementById("formulario");
 
-let Componentes = (leyenda, inp1, inp2)=>{
+let Componentes = (leyenda, texto1, texto2)=>{
     return `
     <fieldset id="infPer">
             <legend>${leyenda}</legend>
-            <label for="user">${inp2} :</label>
+            <label for="user">${texto2} :</label>
             <input type="text" name="user" id="user">
-            <label for="Correo">${inp1} :</label>
+            <label for="Correo">${texto1} :</label>
             <input type="email" name="Correo" id="Correo">
         </fieldset>
     `
